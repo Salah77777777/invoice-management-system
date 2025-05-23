@@ -1,74 +1,61 @@
 # Invoice Management System
 
-A full-stack web application for managing invoices and payments. Built with React, Node.js, Express, and MongoDB.
+A full-stack web application for managing invoices and payments.
 
 ## Features
 
-- Create and log payments
-- Check invoice status
+- Log payments for invoices
+- Check invoice status (Paid, Partial, Unpaid)
 - View payment history
 - Generate summary reports
-- Real-time status updates
-- Modern Material-UI interface
+- Filter payments by date range
+- MongoDB integration
+- RESTful API
 
 ## Tech Stack
 
-### Frontend
-- React
-- Material-UI
-- Axios
-- React Hooks
+- **Frontend:**
+  - React.js
+  - Material-UI
+  - Axios
+  - React Hooks
 
-### Backend
-- Node.js
-- Express
-- MongoDB
-- Mongoose
+- **Backend:**
+  - Node.js
+  - Express.js
+  - MongoDB
+  - Mongoose
+  - Cors
+  - Dotenv
 
 ## Getting Started
 
-### Prerequisites
-- Node.js
-- MongoDB
-- npm or yarn
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   # Install backend dependencies
+   npm install
 
-### Installation
+   # Install frontend dependencies
+   cd invoice-frontend
+   npm install
+   ```
 
-1. Clone the repository:
-```bash
-git clone [your-repo-url]
-cd invoice-management-system
-```
+3. Create a `.env` file in the root directory with:
+   ```
+   MONGODB_URI=your_mongodb_connection_string
+   PORT=5000
+   ```
 
-2. Install backend dependencies:
-```bash
-npm install
-```
+4. Start the development servers:
+   ```bash
+   # Start backend (from root directory)
+   npm start
 
-3. Install frontend dependencies:
-```bash
-cd invoice-frontend
-npm install
-```
-
-4. Create a .env file in the root directory:
-```
-MONGODB_URI=mongodb://localhost:27017/invoiceDB
-PORT=5000
-```
-
-5. Start the backend server:
-```bash
-npm start
-```
-
-6. Start the frontend application:
-```bash
-cd invoice-frontend
-npm start
-```
-
-The application will be running at `http://localhost:3000`
+   # Start frontend (from invoice-frontend directory)
+   cd invoice-frontend
+   npm start
+   ```
 
 ## API Endpoints
 
@@ -76,15 +63,10 @@ The application will be running at `http://localhost:3000`
 - `GET /api/status/:invoiceId` - Get invoice status
 - `GET /api/history/:invoiceId` - Get payment history
 - `POST /api/summary` - Get summary report
+- `GET /api/health` - Check API health
 
-## Contributing
+## Deployment
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+The application is deployed on Vercel:
+- Frontend: [Invoice Frontend](https://invoice-frontend-2zk03eaab-salahs-projects-58bd1b59.vercel.app)
+- Backend: [API Endpoint](https://erp-assignment-afrmq3jq6-salahs-projects-58bd1b59.vercel.app/api)
