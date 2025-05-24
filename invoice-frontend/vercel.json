@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ],
+    "env": {
+        "REACT_APP_API_URL": "https://erp-assignment.vercel.app/api"
+    },
+    "buildCommand": "npm run build",
+    "outputDirectory": "build"
+}
